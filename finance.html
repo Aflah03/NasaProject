@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Financial Assistance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar">
+        
+        <div class="logo">
+         <img src="logo.jpg">
+        </div>
+ 
+         <ul>
+             
+             <li><a href="index.html">Home</a></li>
+             <li><a href="community.html">community</a></li>
+             <li><a href="finance.html" class="active">finance</a></li>
+             <li><a href="alert.html">suraksha</a></li>
+             <li><a href="House.html">House</a></li>
+             
+         </ul>
+     </div>
+  <header>
+    <h1>Community Financial Assistance</h1>
+    <div class="notification-bell" onclick="goToNotifications()"></div>
+  </header>
+
+  <div class="container">
+
+    <section id="apply" class="form-section">
+      <h2>Apply for Financial Assistance</h2>
+      <form id="assistanceForm">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="accountNumber" placeholder="Verified Account Number" required>
+        <input type="text" id="phoneNumber" placeholder="Verified Phone Number" required>
+        <textarea id="requestDetails" placeholder="Describe your financial needs" rows="5" required></textarea>
+  
+        <label for="captcha">What is 3 + 5?</label>
+        <input type="text" id="captcha" placeholder="Your Answer" required>
+        <input type="hidden" id="captchaAnswer" value="8">
+  
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <section id="plans" class="plans-section" style="display:none;">
+      <h2>Financial Plans for You</h2>
+      <p id="welcomeMessage"></p>
+      <div id="plansList">
+        </div>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </section>
+
+    <section id="notifications" class="notifications-section" style="display:none;">
+      <h2>Notifications</h2>
+      <p>No notifications available.</p>
+      <button class="back-button" onclick="goBackToHome()">Back</button>
+    </section>
+
+    <section id="guidelines" class="guidelines-section" style="display:none;">
+      <h2>Plan Guidelines</h2>
+      <div id="guidelineContent"></div>
+      <button class="back-button" onclick="goBackToPlans()">Back to Plans</button>
+    </section>
+
+  </div>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
