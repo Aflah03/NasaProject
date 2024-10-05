@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kerala Landslide Forecast</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+        #colorbar { width: 100%; text-align: center; margin-top: 10px; }
+        .custom-div-icon i {
+            font-size: 24px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="colorbar">
+        <img src="colorbar.png" alt="Color Bar">
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([10.85, 76.27], 7); // Centered on Kerala
+
+        // Add a tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Define the bounding box for Kerala
+        var keralaBounds = [[8.07, 74.85], [12.77, 77.57]];
+
+        // Add the forecast overlay
+        var forecastLayer = L.imageOverlay('kerala_landslide_forecast.png', keralaBounds, {
+            opacity: 0.7  // You can adjust the opacity to blend with the map
+        }).addTo(map);
+
+        // Add the Kerala bounding box polygon
+        var keralaPolygon = L.polygon([
+            [8.07, 74.85],  // Coordinates for bounding box corners
+            [8.07, 77.57],
+            [12.77, 77.57],
+            [12.77, 74.85]
+        ], {
+            color: 'blue',
+            fillOpacity: 0.1
+        }).addTo(map);
+
+        // Fetch the high-risk areas and add exclamation marks
+        fetch('high_risk_areas.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(coord => {
+                    L.marker(coord, {
+                        icon: L.divIcon({
+                            className: 'custom-div-icon',
+                            html: "<div style='background-color:#ff0000;' class='marker-pin'></div><i class='material-icons'>!</i>",
+                            iconSize: [30, 42],
+                            iconAnchor: [15, 42]
+                        })
+                    }).addTo(map);
+                });
+            })
+            .catch(error => console.error('Error fetching high-risk areas:', error));
+    </script>
+</body>
+</html>

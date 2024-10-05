@@ -6,7 +6,7 @@ from shapely.geometry import box
 from rasterio.mask import mask
 
 # URL for today.tif (nowcast data)
-url = 'https://maps.nccs.nasa.gov/download/landslides/latest/today.tif'
+url = 'https://maps.nccs.nasa.gov/download/landslides/latest/tomorrow.tif'
 
 # Function to download the file
 def download_file(url, filename):
