@@ -77,4 +77,14 @@ const financialPlans = [
   }
 
 
-  
+  let index = 0;
+
+function moveSlide(step) {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    index += step;
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    
+    slider.style.transform = `translateX(-${index * 300}px)`; // Adjust based on the image size
+}
