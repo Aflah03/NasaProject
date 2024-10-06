@@ -69,3 +69,4 @@ document.getElementById('submitsignUp').addEventListener('click', function (even
     alert('Incorrect email or password!');
   }
 });
+

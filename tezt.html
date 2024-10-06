@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        /* Add your styles here */
+        body {
+            background: #081b29; /* Light background */
+            font-family: 'Arial', sans-serif; /* Font styling */
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            height: 100vh; /* Full height */
+        }
+
+        section {
+            display: flex; /* Use flexbox for content */
+        }
+
+        .form-container {
+            margin-left: 50px; /* Space between text and form */
+            width: 300px; /* Width of the form */
+        }
+
+        .inputbox {
+            position: relative; /* Position for absolute elements inside */
+            margin-bottom: 20px; /* Space between input fields */
+        }
+
+        .inputbox input {
+            width: 100%; /* Full width for inputs */
+            padding: 10px; /* Padding inside inputs */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+        }
+
+        /* Other existing styles... */
+    </style>
+</head>
+<body>
+  
+<section>
+    <div class="main-container">
+        <div class="content">
+            <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">  
+                <span class="typewriter-text"></span><label for="">|</label>
+            </div>
+            <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">for the brave one<span>   who let us keep away</span></h1>
+            <div class="social-links">
+                <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <!-- Login Form -->
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input id="rEmail" type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input id="rPassword" type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="forget">
+                <label>
+                    <input type="checkbox" /> Remember Me
+                </label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button id="submitsignUp">Log in</button>
+            <div class="toggle">
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForm()">Register</a></p>
+            </div>
+        </form>
+
+        <!-- Registration Form -->
+        <form id="registerForm" class="hidden">
+            <h1>Register</h1>
+            <div class="inputbox">
+                <ion-icon name="person-outline"></ion-icon>
+                <input id="rName" type="text" required>
+                <label for="">Full Name</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input id="rEmailReg" type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input id="rPasswordReg" type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input id="rConfirmPassword" type="password" required>
+                <label for="">Confirm Password</label>
+            </div>
+            <button id="submitRegister">Register</button>
+            <div class="toggle">
+                <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForm()">Login</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({offset:0});
+</script>
+<script src="new.js"></script>
+</body>
+</html>

@@ -15,7 +15,16 @@ body{
     padding: 10px 20px;
     background-color:   #051129; 
 }
+#navbar .logo {
+display: flex;
 
+}
+#navbar .logo h5{
+    margin-left:30px;
+    margin-top:10px;
+    font-size:40px;
+    color:white;
+}
 #navbar .logo img {
     height: 60px; 
     width: auto;
@@ -48,6 +57,62 @@ body{
     color: #007BFF; 
     text-decoration: underline; 
 }
+
+
+
+.slider-container {
+    width: 100%;
+    max-width: 1600px;
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height:1000px;
+}
+
+.slider {
+    display: flex;
+    width: calc(300px * 6); /* Adjust according to the number of images */
+    animation: slide 20s infinite linear;
+}
+
+.slide {
+    min-width: 300px; /* Image size */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Slides halfway */
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .slide {
+        min-width: 200px;
+    }
+
+    .slider {
+        width: calc(200px * 6); /* Adjust based on new image size */
+    }
+}
+
+
+
+
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -175,8 +240,10 @@ footer {
     top: 50%;
   }
   #hero img{
-    height:100px;
+    height:200px;
+    width:200px;
   }
+  
   
 
 
