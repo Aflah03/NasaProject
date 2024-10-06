@@ -64,7 +64,7 @@ document.getElementById('submitsignUp').addEventListener('click', function (even
 
   if (user) {
       //redirect to community on succesful login
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
   } else {
     alert('Incorrect email or password!');
   }
