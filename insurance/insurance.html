@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Services</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white; /* White background */
+            color: #333; /* Dark text */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #28a745; /* Green header */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #e9f5e9; /* Light green background */
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .hero .btn {
+            background-color: #28a745; /* Green button */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f8f8f8; /* Light grey background */
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            background-color: #f5f5f5; /* Light grey for service boxes */
+            padding: 30px;
+            border-radius: 10px;
+            color: #333;
+            border: 2px solid #28a745; /* Green border */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .service-box a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Submit Query Section */
+        .query {
+            background-color: #e9f5e9; /* Light green background */
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .query h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+
+        .query-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .query-form input,
+        .query-form textarea {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .query-form button {
+            background-color: #28a745; /* Green for button */
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .query-form button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003a75; /* Dark blue footer */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Insurance</h1>
+</header>
+
+<section class="hero" id="home">
+    <h1>Your Safety, Our Priority</h1>
+    <p>Protect what matters most with our tailored insurance solutions.</p>
+    <a href="#services" class="btn">Explore Services</a>
+</section>
+
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to providing the best insurance solutions for our clients, ensuring peace of mind and financial security. Our experienced team is here to help you navigate the complexities of insurance.</p>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Insurance Plans</h2>
+    <div class="service-grid">
+        <div class="service-box">
+            <h3>Health Insurance</h3>
+            <p>Comprehensive health coverage for you and your family.</p>
+            <a href="health-insurance.html" target="_blank">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Life Insurance</h3>
+            <p>Secure your family's future with our life insurance policies.</p>
+            <a href="life-insurance.html" target="_blank">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>House Insurance</h3>
+            <p>Protect your home with extensive house insurance coverage.</p>
+            <a href="house-insurance.html" target="_blank">Learn More</a>
+        </div>
+        <div class="service-box">
+            <h3>Job Insurance</h3>
+            <p>Stay protected during employment transitions with job insurance.</p>
+            <a href="job-insurance.html" target="_blank">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="query" id="query">
+    <h2>Submit Your Query</h2>
+    <form class="query-form" onsubmit="showAlert(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="query" rows="4" placeholder="Your Query" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#query">Submit Your Query</a>
+    </div>
+    <p>&copy; 2024 Insurance Company. All rights reserved.</p>
+</footer>
+
+<script>
+    function showAlert(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+        alert("Your query is being submitted!");
+        // Here you can add code to handle the form submission (e.g., sending data to a server)
+    }
+</script>
+
+</body>
+</html>
